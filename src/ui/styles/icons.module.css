@@ -1,0 +1,7 @@
+.iconStyle{
+width:60px;
+height:80px;
+}
+.iconStyle:hover{
+    cursor: pointer;
+}

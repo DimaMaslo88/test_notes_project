@@ -1,0 +1,9 @@
+.notesBlock{
+    gap: 30px;
+    display: flex;
+    flex-direction: row;
+    align-content: flex-start;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    padding: 40px 30px 30px 80px;
+}

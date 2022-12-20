@@ -1,0 +1,25 @@
+.noteCard{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 20px;
+    min-width: 100px;
+    max-width: 365px;
+    width: 100%;
+    min-height: 150px;
+    max-height: 500px;
+    transition: 0.15s ease-in-out;
+    box-shadow: 10px 5px 5px #42bfbf;
+    background-color:#dcf0f5;
+    align-items: center
+}
+.noteCard:hover {
+    cursor: pointer;
+    outline: 2px solid;
+    border-radius: 5px;
+}
+.text{
+    flex-grow: 1;
+    word-break: break-word;
+}

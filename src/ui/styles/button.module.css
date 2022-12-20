@@ -1,0 +1,28 @@
+.buttonStyle{
+font-size: 13px;
+    padding: 10px;
+}
+.button{
+    background-color: springgreen;
+    font-size: 20px;
+    border-radius: 5px;
+}
+.button:hover{
+    color: springgreen;
+    box-shadow: inset 0 0 10px rgb(89, 93, 89), 0 0 9px 3px rgba(27, 178, 255, 0.2);
+    transition-duration: 1s;
+    background: rgb(255, 255, 255);
+
+    cursor:pointer;
+}
+.red{
+    background-color: red;
+}
+.red:hover{
+    color: red;
+    box-shadow: inset 0 0 10px rgb(89, 93, 89), 0 0 9px 3px rgba(27, 178, 255, 0.2);
+    transition-duration: 1s;
+    background: rgb(255, 255, 255);
+
+}
+
