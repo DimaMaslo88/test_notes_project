@@ -16,7 +16,7 @@ const deleteNoteHandler=()=>{
 }
     return (
         <div className={s.noteCard}>
-            <div onClick={()=>edit(note.title,note.text,note.id)}>
+            <div className={s.noteCardClick} onClick={()=>edit(note.title,note.text,note.id)}>
                 <h2>{note.title}</h2>
                 <p className={s.text}>{note.text}</p>
 

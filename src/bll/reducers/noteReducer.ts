@@ -39,7 +39,7 @@ export const noteReducer = (state: InitialStateType = initialState, action: Note
             return {...state,note: state.note.filter(n=>n.id!==action.payload.id)}
         }
         case "SEARCH-TITLE":{
-            return{...state,note:state.note.filter(n=>n.title.toLowerCase().includes(action.payload.title))}
+            return{...state,note:state.note.filter(n=>n.title === action.payload.title)}
         }
 
 

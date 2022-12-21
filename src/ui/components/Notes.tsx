@@ -1,6 +1,6 @@
 import React, {ChangeEvent, useState} from 'react';
 import {useDispatch, useSelector} from "react-redux";
-import {selectNotes} from "../../../src/ui/components/selectors/selectors";
+import {selectNotes, selectTitle} from "../../../src/ui/components/selectors/selectors";
 import {Note} from "ui/components/Note";
 import {changeNoteAction} from "bll/actions/noteActions";
 import {EditModalWindow} from "ui/components/modalWindow/editmodalWindow";
@@ -9,7 +9,8 @@ import s from "../styles/notes.module.css"
 export const Notes = () => {
     const dispatch = useDispatch()
     const notes = useSelector(selectNotes)
-    // const [open, setOpen] = useState<boolean>(false)
+const searchParams = useSelector(selectTitle)
+
     const [openEditModal, setOpenEditModal] = useState<boolean>(false)
     const [titleModal, setTitleModal] = useState<string>('')
     const [textModal, setTextModal] = useState<string>('')
@@ -47,15 +48,7 @@ export const Notes = () => {
         <div className={s.notesBlock}>
 
 
-            {/*{open && <AddModalWindow title={titleModal}*/}
-            {/*                         text={textModal}*/}
-            {/*                         onDiscard={onDiscardHandler}*/}
-            {/*                         onTitleChange={onTitleChangeHandler}*/}
-            {/*                         onTextChange={onTextChangeHandler}*/}
-            {/*                         modalId={modalId}*/}
 
-
-            {/*/>}*/}
             {openEditModal && <EditModalWindow title={titleModal}
                                      text={textModal}
                                      onDiscard={onDiscardHandlerEditModal}
@@ -68,7 +61,7 @@ export const Notes = () => {
             <div >
 
             </div>
-            {notes.map(n => <Note key={n.id}
+            {notes && notes.filter(n=> n.title && n.title.toLowerCase().includes(searchParams.toLowerCase())).map(n => <Note key={n.id}
                                   note={n}
                                   edit={editNoteChangeHandler}
 

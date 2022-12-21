@@ -27,7 +27,7 @@ export const EditModalWindow = ({title, text, onDiscard, onTitleChange, onTextCh
                           onChange={onTextChange}
                 />
                 <div className={s.ButtonBox}>
-                    <Button title={'Cancel'} callback={() => onDiscard && onDiscard()}/>
+                    <Button title={'Cancel'}  red={true} callback={() => onDiscard && onDiscard()}/>
                     <Button title={'Save'} callback={editNoteHandler}/>
                 </div>
             </div>
